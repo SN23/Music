@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.sukhjinder.music.MainActivity">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/title"
@@ -11,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:paddingTop="10dp"
-        android:text="Main Screen"
+        android:text="Store"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -23,7 +21,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="50dp"
-        android:text="Displays \n - Recently played songs \n - Popular songs \n - Songs by genre " />
+        android:text="Displays albums and songs that are available for purchase" />
 
     <TextView
         android:id="@+id/implementationTitle"
@@ -45,34 +43,24 @@
         android:layout_centerHorizontal="true"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:text="- Retrieves recently played music and displays it \n - Displays popular songs retrieved from lastfm api \n - When user selects popular song the request is forwarded to the store activity" />
-
-    <Button
-        android:id="@+id/songButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/implementation"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="83dp"
-        android:text="Songs" />
+        android:text="- Use gmusicapi to link to songs on google Music store \n - Obtain popular songs and recently released music for user to purchase " />
 
     <Button
         android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/songButton"
-        android:layout_toLeftOf="@+id/songButton"
-        android:layout_toStartOf="@+id/songButton"
-        android:text="Search" />
+        android:text="Search"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/title"
+        android:layout_toStartOf="@+id/title" />
 
     <Button
-        android:id="@+id/storeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/songButton"
-        android:layout_toEndOf="@+id/songButton"
-        android:layout_toRightOf="@+id/songButton"
-        android:text="@string/store" />
-
+        android:text="Now Playing"
+        android:id="@+id/nowPlayingButton"
+        android:layout_alignTop="@+id/searchButton"
+        android:layout_alignRight="@+id/implementationTitle"
+        android:layout_alignEnd="@+id/implementationTitle" />
 
 </RelativeLayout>

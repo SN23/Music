@@ -6,19 +6,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
-
+/**
+ * Created by Sukhjinder on 6/29/16.
+ */
+public class NowPlaying extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_now_playing);
 
         Button searchButton = (Button) findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent searchIntent = new Intent(MainActivity.this, Search.class);
+                Intent searchIntent = new Intent(NowPlaying.this, Search.class);
                 startActivity(searchIntent);
             }
         });
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         songButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent songIntent = new Intent(MainActivity.this, List.class);
+                Intent songIntent = new Intent(NowPlaying.this, List.class);
                 startActivity(songIntent);
             }
         });
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         storeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent storeIntent = new Intent(MainActivity.this, Store.class);
+                Intent storeIntent = new Intent(NowPlaying.this, Store.class);
                 startActivity(storeIntent);
             }
         });

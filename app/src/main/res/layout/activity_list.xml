@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:paddingTop="10dp"
-        android:text="Main Screen"
+        android:text="Song List"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -23,7 +23,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="50dp"
-        android:text="Displays \n - Recently played songs \n - Popular songs \n - Songs by genre " />
+        android:text="Displays the users songs in alphabetical order" />
 
     <TextView
         android:id="@+id/implementationTitle"
@@ -43,36 +43,26 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/implementationTitle"
         android:layout_centerHorizontal="true"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:text="- Retrieves recently played music and displays it \n - Displays popular songs retrieved from lastfm api \n - When user selects popular song the request is forwarded to the store activity" />
-
-    <Button
-        android:id="@+id/songButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/implementation"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="83dp"
-        android:text="Songs" />
+        android:text="- Access the songs from the users device \n - Displays the songs in a scrollable view " />
 
     <Button
         android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/songButton"
-        android:layout_toLeftOf="@+id/songButton"
-        android:layout_toStartOf="@+id/songButton"
-        android:text="Search" />
+        android:text="Search"
+        android:layout_alignTop="@+id/nowPlayingButton"
+        android:layout_toLeftOf="@+id/nowPlayingButton"
+        android:layout_toStartOf="@+id/nowPlayingButton" />
 
     <Button
-        android:id="@+id/storeButton"
+        android:id="@+id/nowPlayingButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/songButton"
-        android:layout_toEndOf="@+id/songButton"
-        android:layout_toRightOf="@+id/songButton"
-        android:text="@string/store" />
+        android:text="Now playing"
+        android:layout_below="@+id/implementation"
+        android:layout_alignRight="@+id/implementationTitle"
+        android:layout_alignEnd="@+id/implementationTitle"
+        android:layout_marginTop="128dp" />
 
 
 </RelativeLayout>

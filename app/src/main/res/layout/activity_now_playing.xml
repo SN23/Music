@@ -6,12 +6,12 @@
     tools:context="com.sukhjinder.music.MainActivity">
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:paddingTop="10dp"
-        android:text="Main Screen"
+        android:text="Now Playing"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -23,7 +23,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="50dp"
-        android:text="Displays \n - Recently played songs \n - Popular songs \n - Songs by genre " />
+        android:text="Displays \n - Current song being played \n - Artist name \n - Album name \n - Album cover art" />
 
     <TextView
         android:id="@+id/implementationTitle"
@@ -43,36 +43,34 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/implementationTitle"
         android:layout_centerHorizontal="true"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:text="- Retrieves recently played music and displays it \n - Displays popular songs retrieved from lastfm api \n - When user selects popular song the request is forwarded to the store activity" />
-
-    <Button
-        android:id="@+id/songButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/implementation"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="83dp"
-        android:text="Songs" />
+        android:text="- Use MusicBrainz API to obtain Coverart \n- Use the picasa API to display album cover art \n - Obtain relevant info about current song from MP3 tag" />
 
     <Button
         android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Search"
         android:layout_alignTop="@+id/songButton"
-        android:layout_toLeftOf="@+id/songButton"
-        android:layout_toStartOf="@+id/songButton"
-        android:text="Search" />
+        android:layout_toLeftOf="@+id/textView4"
+        android:layout_toStartOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/songButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Songs"
+        android:layout_below="@+id/implementation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp" />
 
     <Button
         android:id="@+id/storeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Store"
         android:layout_alignTop="@+id/songButton"
-        android:layout_toEndOf="@+id/songButton"
-        android:layout_toRightOf="@+id/songButton"
-        android:text="@string/store" />
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
 
 
 </RelativeLayout>
