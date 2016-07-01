@@ -9,27 +9,27 @@ import android.widget.Button;
 /**
  * Created by Sukhjinder on 6/29/16.
  */
-public class List extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
+        setContentView(R.layout.activity_search);
 
-        Button searchButton = (Button) findViewById(R.id.searchButton);
+        Button searchButton = (Button) findViewById(R.id.songButton);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent searchIntent = new Intent(List.this, Search.class);
+                Intent searchIntent = new Intent(SearchActivity.this, SearchActivity.class);
                 startActivity(searchIntent);
             }
         });
 
-        Button nowPlayingButton = (Button) findViewById(R.id.nowPlayingButton);
-        nowPlayingButton.setOnClickListener(new View.OnClickListener() {
+        Button songButton = (Button) findViewById(R.id.nowPlayingButton);
+        songButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nowPlayingIntent = new Intent(List.this, NowPlaying.class);
-                startActivity(nowPlayingIntent);
+                Intent songIntent = new Intent(SearchActivity.this, ListActivity.class);
+                startActivity(songIntent);
             }
         });
     }

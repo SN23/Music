@@ -9,7 +9,7 @@ import android.widget.Button;
 /**
  * Created by Sukhjinder on 6/29/16.
  */
-public class Store extends AppCompatActivity {
+public class StoreActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +19,7 @@ public class Store extends AppCompatActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent searchIntent = new Intent(Store.this, Search.class);
+                Intent searchIntent = new Intent(StoreActivity.this, SearchActivity.class);
                 startActivity(searchIntent);
             }
         });
@@ -28,7 +28,7 @@ public class Store extends AppCompatActivity {
         nowPlayingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nowPlayingIntent = new Intent(Store.this, NowPlaying.class);
+                Intent nowPlayingIntent = new Intent(StoreActivity.this, NowPlayingActivity.class);
                 startActivity(nowPlayingIntent);
             }
         });
